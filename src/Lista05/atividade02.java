@@ -1,15 +1,13 @@
-package Lista02;
-
+package Lista05;
 import java.util.Scanner;
-
-public class atividade05 {
+public class atividade02 {
     public static void main(String[] args) {
 
         System.out.println("5. Calculo de desconto de INSS");
 
         Scanner ler = new Scanner(System.in);
 
-        System.out.println("\n Seja bem vindo (a), a CREDICARD. \n");
+        System.out.println("\n Seja bem vindo(a), a CREDICARD. \n");
 
         boolean lValidaIdade = true;
         while (lValidaIdade) {
@@ -46,7 +44,7 @@ public class atividade05 {
         if(nemp > parc){
             System.out.println(" O crédito solicitado foi aprovado. ");
         } else{
-            System.out.println(" O crédito solicitado não foi aprovado. ");
+            System.out.println(" O crédito solicitado reprovado. ");
         }
     }
 }
