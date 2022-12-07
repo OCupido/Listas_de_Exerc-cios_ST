@@ -3,11 +3,11 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Jogo_da_Velha {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner (System.in);
         String[][] matriz = new String[3][3];
         String opc;
-        int posicaoY;
-        int posicaoX;
+        int posicao_y;
+        int posicao_x;
         String jogador1;
         String jogador2;
         String simbolo = "X";
@@ -22,19 +22,19 @@ public class Jogo_da_Velha {
             do {
                 for (int cont = 0; cont < 9; cont++) {
                     do {
-                        System.out.print("Digite a posição Vertical: ");
-                        posicaoY = input.nextInt();
-                        System.out.print("Digite a posição Horizontal: ");
-                        posicaoX = input.nextInt();
-                    } while (posicaoY <= 0 || posicaoY > 3 ||
-                             posicaoX <= 0 || posicaoX > 3 ||
-                             matriz[posicaoY - 1][posicaoX - 1] != null);
+                        System.out.print("Digite a posição vertical: ");
+                        posicao_y = input.nextInt();
+                        System.out.print("Digite a posição horizontal: ");
+                        posicao_x = input.nextInt();
+                    } while (posicao_y <= 0 || posicao_y > 3 ||
+                            posicao_x <= 0 || posicao_x > 3 ||
+                            matriz[posicao_y - 1][posicao_x - 1] != null);
 
-                    matriz[posicaoY - 1][posicaoX -1] = simbolo;
+                    matriz[posicao_y - 1][posicao_x - 1] = simbolo;
 
                     for (int y = 0; y < 3; y++) {
                         for (int x = 0; x < 3; x++) {
-                            if ((matriz[y][0] == "X" && matriz [y][1] == "X") ||
+                            if ((matriz[y][0] == "X" && matriz[y][1] == "X" && matriz[y][2] == "X") ||
                                     (matriz[y][0] == "O" && matriz[y][1] == "O" && matriz[y][2] == "O") ||
                                     (matriz[0][x] == "X" && matriz[1][x] == "X" && matriz[2][x] == "X") ||
                                     (matriz[0][x] == "O" && matriz[1][x] == "O" && matriz[2][x] == "O") ||
@@ -45,6 +45,7 @@ public class Jogo_da_Velha {
                                 sair = true;
                                 break;
                             }
+
                             if (matriz[y][x] == null)
                                 System.out.print("[_]");
                             else
@@ -56,6 +57,7 @@ public class Jogo_da_Velha {
 
                         System.out.println();
                     }
+
                     if (sair == true)
                         break;
 
@@ -67,13 +69,13 @@ public class Jogo_da_Velha {
                 }
 
                 if (sair == true) {
-                    if (simbolo == "X")
-                        System.out.println(jogador1 + " ganhou!!!");
+                    if(simbolo == "X")
+                        System.out.println(jogador1 + " ganhou!!");
                     else
-                        System.out.println(jogador2 + "ganhou!!!");
+                        System.out.println(jogador2 + " ganhou!!");
                 }
 
-                System.out.print("Deseja jogar De Novo Sim ou Não?");
+                System.out.print("Deseja começar novamente Sim ou Não? ");
                 opc = input.next();
 
                 sair = false;
@@ -82,12 +84,12 @@ public class Jogo_da_Velha {
                     for (int x = 0; x < 3; x++)
                         matriz[y][x] = null;
                 }
-            } while (opc.toUpperCase().equals("Sim"));
+            } while (opc.toUpperCase().equals("SIM"));
         } catch (InputMismatchException e) {
             System.out.println("Você digitou o valor errado!");
             main(null);
-        }catch (Exception e) {
-            System.out.println("ERRO!!!");
+        } catch (Exception e) {
+            System.out.println("ERRO!");
             e.printStackTrace();
         }
     }
