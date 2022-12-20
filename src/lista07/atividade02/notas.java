@@ -55,7 +55,7 @@ public class notas {
         if (resultado > 7){
             System.out.println(" Sua Média em " + materia + " é " + resultado + " Você está Aprovado(a) ");
         }
-        else if (resultado == 6 | resultado == 6.9) {
+        else if (resultado == 6 ) {
             System.out.println(" Sua Média em " + materia + " é " + resultado + " Você está em Recuperação ");
         }
         else if (resultado < 6) {
