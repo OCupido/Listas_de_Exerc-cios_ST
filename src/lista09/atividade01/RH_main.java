@@ -5,7 +5,7 @@ public class RH_main {
 
         //gerente
         gerente gerente = new gerente();
-        gerente.setNome("Alberto");
+        gerente.setNome("Umberto");
         gerente.setTelefone("99236-6744");
         gerente.setData_de_admicao("09/01/2000");
 
@@ -21,7 +21,7 @@ public class RH_main {
 
         //desenvolvedor
         desenvolvedor dev = new desenvolvedor();
-        dev.setNome("Robeto");
+        dev.setNome("Doisberto");
         dev.setTelefone("948-3567");
         dev.setData_de_admicao("10/11/2010");
         dev.setHoras(16);
@@ -34,7 +34,7 @@ public class RH_main {
 
         //empregado
         empregado emp = new empregado();
-        emp.setNome("Humberto");
+        emp.setNome("Trêsberto");
         emp.setTelefone("95496-4370");
         emp.setData_de_admicao("31/06/2001");
         emp.setSalario("Empregado Recebe: 2.500");

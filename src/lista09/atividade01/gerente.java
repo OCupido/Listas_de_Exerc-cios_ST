@@ -41,7 +41,7 @@ public class gerente extends pessoa{
 
     public double calcger(){
         double calcularger = (salario + horas + dias);
-        System.out.println("Gerente recebe: " + calcularger);
+        System.out.println("Gerente recebe:  " + calcularger);
         return 0;
     }
 }
