@@ -5,7 +5,6 @@ public class Conta {
     private int numero, saques;
     private double saldo, investido;
     Scanner sc = new Scanner(System.in);
-
     public String getNome() { return nome; }
     public void setNome(String nome) { this.nome = nome; }
     public int getNumero() { return numero; }
